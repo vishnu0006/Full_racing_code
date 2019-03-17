@@ -1,0 +1,50 @@
+﻿@model User
+@{
+    ViewData["Title"] = "Register";
+}
+
+<h1>Register</h1>
+
+
+<form method="post" action="@Url.Action("RegisterUser", "User")">
+    FirstName: <input asp-for="FirstName" />
+    LastName: <input asp-for="LastName" />
+    Dob: <input asp-for="DOB" />
+    Position: <input asp-for="Posistion" />
+    Address: <input asp-for="Address" />
+    Postcode: <input asp-for="PostCode" />
+    City: <input asp-for="City" />
+    Email: <input asp-for="Email" />
+    Password: <input asp-for="Password" />
+    Phonenumber: <input asp-for="PhoneNumber" />
+    Mobile: <input asp-for="MobilePhoneNumber" />
+    Team: <input asp-for="Team" />
+    Points: <input asp-for="Points" />
+    <button type="submit" id="submitAll">Submit</button>
+</form>
+
+
+    @*@using (Html.BeginForm("RegisterUser", "User", FormMethod.Post))
+    {
+        @Html.TextBoxFor(model => model.FirstName);
+        @Html.TextBoxFor(model => model.LastName);
+        @Html.TextBoxFor(model => model.DOB);
+        @Html.TextBoxFor(model => model.Posistion);
+        @Html.TextBoxFor(model => model.Address);
+        @Html.TextBoxFor(model => model.PostCode);
+        @Html.TextBoxFor(model => model.City);
+        @Html.TextBoxFor(model => model.Email);
+        @Html.TextBoxFor(model => model.Password);
+        @Html.TextBoxFor(model => model.PhoneNumber);
+        @Html.TextBoxFor(model => model.MobilePhoneNumber);
+        @Html.TextBoxFor(model => model.Points);
+        @Html.TextBoxFor(model => model.Team);
+        <button type="submit">Subscribe</button>
+    }*@
+
+    @*<form method="post">
+            <div asp-validation-summary="All"></div>
+            <div>Address: <input asp-for="Address" /></div>
+            <input type="Submit" />
+
+        </form>*@
